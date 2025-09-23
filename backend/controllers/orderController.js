@@ -32,7 +32,7 @@ const placeOrder = async (req,res) => {
 
         line_items.push({
             price_data:{
-                currency:"lrk",
+                currency:"lkr",
                 product_data:{
                     name:"Delivery Charges"
                 },
@@ -45,7 +45,7 @@ const placeOrder = async (req,res) => {
             line_items:line_items,
             mode:'payment',
             success_url:`${frontend_url}/verify?success=true&orderId=${newOrder._id}` ,
-            cansel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}` ,
+            cancel_url:`${frontend_url}/verify?success=false&orderId=${newOrder._id}` ,
         })
 
         res.json({success:true,session_url:session.url})
