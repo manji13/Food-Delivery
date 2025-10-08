@@ -1,0 +1,102 @@
+.my-orders {
+    margin: 50px 0;
+    padding: 0 20px;
+}
+
+.my-orders h2 {
+    font-size: 28px;
+    font-weight: 600;
+    color: #262626;
+    margin-bottom: 30px;
+}
+
+.my-orders .container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.my-orders-orders {
+    display: grid;
+    grid-template-columns: 0.5fr 2fr 1fr 1fr 1.5fr 1fr;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 15px;
+    border: 2px solid tomato;
+    border-radius: 8px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(255, 99, 71, 0.1);
+    transition: all 0.3s ease;
+}
+
+.my-orders-orders:hover {
+    box-shadow: 0 4px 12px rgba(255, 99, 71, 0.25);
+    transform: translateY(-2px);
+}
+
+.my-orders-orders img {
+    width: 50px;
+}
+
+.my-orders-orders p {
+    font-size: 14px;
+    color: #262626;
+    margin: 0;
+}
+
+.my-orders-orders p span {
+    color: tomato;
+    font-size: 16px;
+    margin-right: 5px;
+}
+
+.my-orders-orders p b {
+    color: tomato;
+    font-weight: 600;
+}
+
+.my-orders-orders button {
+    padding: 10px 20px;
+    border: 1px solid tomato;
+    background-color: transparent;
+    color: tomato;
+    font-size: 14px;
+    font-weight: 500;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.my-orders-orders button:hover {
+    background-color: tomato;
+    color: white;
+}
+
+/* Responsive Design */
+@media (max-width: 900px) {
+    .my-orders-orders {
+        grid-template-columns: 1fr 2fr 1fr;
+        gap: 15px;
+        padding: 15px;
+    }
+    
+    .my-orders-orders p:nth-child(4),
+    .my-orders-orders p:nth-child(5) {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 600px) {
+    .my-orders-orders {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
+    
+    .my-orders-orders img {
+        width: 40px;
+    }
+    
+    .my-orders h2 {
+        font-size: 24px;
+    }
+}
